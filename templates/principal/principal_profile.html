@@ -1,0 +1,67 @@
+{% extends 'principal/principal_base.html' %}
+{% load static %}
+{% block content %}
+    <div class="container">
+        <div class="row">
+            <div class="col-md-2"></div>
+            <div class="col-md-8 mt-5">
+                <div class="card bg-transparent border-0 pt-3">
+                    <form action="{% url 'register_subject' %}" method="post">
+                        {% csrf_token %}
+                        <div class="card-body">
+                            <div class="text-center pt-3">
+                                <img src="{% static 'app/img/logo.jpg' %}" alt="logo" height="75px"
+                                     width="75px">
+                            </div>
+                            <div class="pt-3 text-center pb-3 home-text">
+                                <h3 class="text-primary">prosperKids</h3>
+                            </div>
+                            <div class="pt-3 text-center">
+                                <h3 class="text-primary">WELCOME PRINCIPAL</h3>
+                            </div>
+                            <h4>Prosper Kids graciously welcomes you, PRINCIPAL to regularly use this uncommon
+                                tool in conformity to our desire to be a world-class institution producing the
+                                best-breed of
+                                pupils of international repute and global champions of tomorrow. Deployments of
+                                up-to-now
+                                technologies amongst other investments give us the superior edge above other schools.
+                                Prosper
+                                Kids is now accessible to you anywhere, anytime, 24/7/366.
+
+                                From here, you can view your profile, results of all Sessions and Terms as well as your
+                                payment
+                                records while in school.
+                                Please use the navigation links to your left to perform necessary action.</h4>
+                        </div>
+                        <div class="card-deck justify-content-around">
+                            <div class="card shadow-sm border-0">
+                                <div class="card-body text-center">
+                                    <p class="card-text">#</p>
+                                </div>
+                            </div>
+                            <div class="card shadow-sm border-0">
+                                <div class="card-body text-center">
+                                    <p class="card-text">#</p>
+                                </div>
+                            </div>
+                            <div class="card shadow-sm border-0">
+                                <div class="card-body text-center">
+                                    <p class="card-text">#</p>
+                                </div>
+                            </div>
+                            <div class="card shadow-sm border-0">
+                                <div class="card-body text-center">
+                                    <p class="card-text">#</p>
+                                </div>
+                            </div>
+                        </div>
+                    </form>
+                </div>
+            </div>
+
+            <div class="col-md-2"></div>
+
+        </div>
+    </div>
+
+{% endblock %}

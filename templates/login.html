@@ -1,0 +1,51 @@
+{% extends 'base.html' %}
+{% load static %}
+{% block content %}
+
+    <div class="container">
+        <div class="row">
+            <div class="col-md-3"></div>
+            <div class="col-md-6 mt-5">
+                <div class="text-center pt-1">
+                    <img src="{% static 'app/img/logo.jpg' %}" alt="logo" height="100px"
+                         width="100px">
+                </div>
+                <div class="pt-3 text-center pb-3 home-text">
+                    <h2 class="text-primary">HAPPYDAY</h2>
+                </div>
+                <div class="pt-3 text-center">
+                    <h3 class="text-primary">LOGIN</h3>
+                </div>
+                <div class="card card-body bg-light push">
+                    <form action="{% url 'login_post' %}?next={{ next }}" method="post">
+                        {% csrf_token %}
+                        {% if message %}
+                            <div class="alert alert-danger">
+                                {{ message }}
+                            </div>
+                        {% endif %}
+
+                        <div class="form-row pt-3">
+                            <div class="form-group col-11 m-auto">
+                                <label class="form-check-label text-dark" for="username">Email:</label>
+                                <input name="email" id="email" class="form-control" type="text">
+                            </div>
+                        </div>
+                        <div class="form-row pt-3">
+                            <div class="form-group col-11 m-auto">
+                                <label class="form-check-label text-dark" for="password">Password:</label>
+                                <input name="password" id="password" class="form-control" type="password">
+                            </div>
+                        </div>
+                        <div class="text-center pt-4">
+                            <button type="submit" class="btn btn-primary text-light align-content-center">
+                                Login
+                            </button>
+                        </div>
+                </div>
+                </form>
+            </div>
+        </div>
+    </div>
+    </div>
+{% endblock %}

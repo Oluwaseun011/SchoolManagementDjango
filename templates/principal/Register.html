@@ -1,0 +1,103 @@
+d{% extends 'base.html' %}
+{% load static %}
+{% block content %}
+    <div class="container">
+        <div class="row">
+            <div class="col-2"></div>
+            <div class="col-md-8 mt-5">
+                <div class="card bg-transparent border-0">
+                    <form action="{% url 'register_principal' %}" method="post">
+                        {% csrf_token %}
+                        <div class="card-body">
+                            <div class="text-center pt-3">
+                                <img src="{% static 'app/img/logo.jpg' %}" alt="logo" height="75px"
+                                     width="75px">
+                            </div>
+                            <div class="pt-3 text-center pb-3 home-text">
+                                <h3 class="text-primary">prosperKids</h3>
+                            </div>
+                            <div class="pt-3 text-center">
+                                <h5 class="text-primary">REGISTER PRINCIPAL</h5>
+                            </div>
+                            <div class="form-row">
+                                <div class="form-group col-md-6">
+                                    <label class="form-check-label text-primary" for="title">Title:</label>
+                                    <select name="title" id="title" class="form-control">
+                                        <option value=" ">Mr/Mrs/Miss</option>
+                                        <option value="mr">Mr</option>
+                                        <option value="mrs">Mrs</option>
+                                        <option value="miss">Miss</option>
+                                        <option value="others">Others</option>
+                                    </select>
+                                </div>
+                                <div class="form-group col-md-6">
+                                    <label class="form-check-label text-primary" for="qualification">Qualification:</label>
+                                    <select name="qualification" id="qualification" class="form-control">
+                                        <option value=" ">Select Qualification</option>
+                                        <option value="nce">NCE</option>
+                                        <option value="nd">ND</option>
+                                        <option value="hnd">HND</option>
+                                        <option value="bsc">BSc</option>
+                                        <option value="bed">BEd</option>
+
+                                    </select>
+                                </div>
+                            </div>
+                            <div class="form-row">
+                                <div class="form-group col-md-6">
+                                    <label class="form-check-label text-primary" for="username">Username:</label>
+                                    <input name="username" id="username" class="form-control" type="text">
+                                </div>
+                                <div class="form-group col-md-6">
+                                    <label class="form-check-label text-primary" for="email">Email:</label>
+                                    <input name="email" id="email" class="form-control" type="email">
+                                </div>
+                            </div>
+                            <div class="form-row">
+                                <div class="form-group col-md-6">
+                                    <label class="form-check-label text-primary" for="password">Password:</label>
+                                    <input name="password" id="password" class="form-control" type="password">
+                                </div>
+                                <div class="form-group col-md-6">
+                                    <label class="form-check-label text-primary" for="confirm_password">Confirm Password:</label>
+                                    <input name="confirm_password" id="confirm_password" class="form-control" type="password">
+                                </div>
+                            </div>
+                            <div class="form-row">
+                                <div class="form-group col-md-6">
+                                    <label class="form-check-label text-primary" for="first_name">First name:</label>
+                                    <input name="first_name" id="first_name" class="form-control" type="text">
+                                </div>
+                                <div class="form-group col-md-6">
+                                    <label class="form-check-label text-primary" for="last_name">Last name:</label>
+                                    <input name="last_name" id="last_name" class="form-control" type="text">
+                                </div>
+                            </div>
+                            <div class="form-row">
+                                <div class="form-group col-md-6">
+                                    <label class="form-check-label text-primary" for="phone_number">Phone
+                                        Number:</label>
+                                    <input name="phone_number" id="phone_number" class="form-control" type="tel">
+                                </div>
+                                <div class="form-group col-md-6">
+                                    <label class="form-check-label text-primary" for="gender">Gender:</label>
+                                    <select name="gender" id="gender" class="form-control">
+                                        <option value=" ">Select Gender</option>
+                                        <option value="male">Male</option>
+                                        <option value="female">Female</option>
+                                    </select>
+                                </div>
+                            </div>
+                            <div class="text-center pt-4">
+                                <button type="submit" class="btn btn-primary text-light align-content-center">
+                                    Register Principal
+                                </button>
+                            </div>
+                        </div>
+                    </form>
+                </div>
+            </div>
+            <div class="col-2"></div>
+        </div>
+    </div>
+{% endblock %}

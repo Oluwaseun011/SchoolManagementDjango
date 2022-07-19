@@ -1,0 +1,33 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <title>examination slip</title>
+</head>
+<body>
+{% load static %}
+<div class="container">
+    <div class="row">
+        <div class="col-md-3"></div>
+        <div class="col-md-6 mt-5">
+            <div class="text-center pt-1">
+{#                <img src="{% static 'app/img/logo.jpg' %}" alt="logo" height="75px"#}
+{#                     width="75px">#}
+            </div>
+            <div class="pt-3 text-center pb-3 home-text">
+                <h3 class="text-primary">HAPPYDAY</h3>
+            </div>
+            <div class="pt-3 text-center">
+                <h5 class="text-primary">EXAMINATION SLIP</h5>
+            </div>
+        </div>
+    </div>
+    <div class="col-md-3"></div>
+</div>
+
+<b>I'm {{ applicant.passport }}building web-based, {{ applicant.first_name }}data-driven{{ applicant.email }} apps using Django. <br>
+    Eventually (or unfortunately), I will need to generate some reports that are printer-friendly. </b>
+Logically, PDF is the format for such files... <br>
+so how am I going to convert my xHTML and CSS to a nice-looking PDF document?<br>
+</body>
+</html>
